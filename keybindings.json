@@ -1,0 +1,123 @@
+// Place your key bindings in this file to override the defaults
+[
+    // F8     -> search next error
+    // F12    -> go to definition
+    // cmd+t  -> search definition
+  
+    {
+      "key": "shift+ctrl+o",
+      "command": "workbench.action.gotoSymbol"
+    },
+    {
+      "key": "ctrl+enter",
+      "command": "editor.action.triggerSuggest",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "alt+f", // alt is opt
+      "command": "editor.action.formatSelection",
+      "when": "editorTextFocus"
+    },
+  
+    // Transform text ctrl+t ctrl+[choice]
+    {
+      "key": "ctrl+t ctrl+u", // alt is opt
+      "command": "editor.action.transformToUppercase",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+t ctrl+l", // alt is opt
+      "command": "editor.action.transformToLowercase",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+t ctrl+s", // alt is opt
+      "command": "editor.action.transformToSnakecase",
+      "when": "editorTextFocus"
+    },
+  
+    // Terminal Shortcuts
+    {
+      // Move in to terminal
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.terminal.focus",
+      "when": "editorTextFocus"
+    },
+    {
+      // Move to editor from terminal
+      "key": "ctrl+shift+e",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+    },
+    {
+      // Toggle terminal in the panel
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+      // Close terminal instance
+      "key": "ctrl+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus"
+    },
+    {
+      // Create a new terminal
+      "key": "ctrl+alt+t",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+      // Split terminal
+      "key": "ctrl+\\",
+      "command": "workbench.action.terminal.split",
+      "when": "terminalFocus"
+    },
+    {
+      // List of recent terminal commands
+      // Needs: "terminal.integrated.shellIntegration.enabled": true
+      "key": "ctrl+l",
+      "command": "workbench.action.terminal.runRecentCommand",
+      "when": "terminalFocus"
+    },
+    // Move around terminals
+    {
+      "key": "alt+ctrl+right",
+      "command": "workbench.action.terminal.focusNextPane",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "alt+ctrl+left",
+      "command": "workbench.action.terminal.focusPreviousPane",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+shift+right",
+      "command": "workbench.action.terminal.focusNextPane",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+shift+left",
+      "command": "workbench.action.terminal.focusPreviousPane",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+shift+down",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+      "key": "ctrl+shift+up",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+      "key": "ctrl+numpad_divide",
+      "command": "editor.action.commentLine",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+oem_2",
+      "command": "-editor.action.commentLine",
+      "when": "editorTextFocus && !editorReadonly"
+    }
+  ]
